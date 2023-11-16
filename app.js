@@ -2,11 +2,11 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const url = require('url');
+const process = require("process");
 const PORT = 3500;
 const qs = require('querystring');
 
 let cookie;
-
 const users = require('./users');
 
 const mimeTypes = {
@@ -155,7 +155,7 @@ http.createServer(function(req, res){
             }
     }
 
-}).listen(PORT);
+}).listen(process.env.PORT || PORT);
 
 
 // ItGid.info - education platform

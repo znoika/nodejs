@@ -1,0 +1,5 @@
+version: 1
+applications:
+- name: my-nodejs-server
+  memory: 128M
+  instances: 1
